@@ -51,17 +51,18 @@ export const Success = () => {
     const cart = useSelector(state => state.cart)
     const dispatch = useDispatch();
     
-    console.log(cart)
-useEffect( ()=>
-{
+   
+useEffect( ()=>             //useeffect used, because the cart needs to load from database, and then it will update the cartredux
+{                            //, thus once the cart state is loaded from database, useeffect is triggered and order is stored.
 
   if(cart.quantity===0)
   return;
   const fetch=async ()=>{
+    console.log(cart)
   
-  Neworder(dispatch,user,{...cart});
   console.log(cart)
   const res = await axios.get(REACT_APP_URL+'/checkout/success/'+id)
+  Neworder(dispatch,user,{...cart,checkoutId:id});
   console.log(res.data);
 
 };

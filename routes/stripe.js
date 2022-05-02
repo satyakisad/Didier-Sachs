@@ -50,8 +50,8 @@ try {
       payment_method_types: ["card"],
       mode: "payment",
       line_items: lineItems,
-      success_url: `http://localhost:3000/success/{CHECKOUT_SESSION_ID}`,
-      cancel_url: `http://localhost:3000/cancel`,
+      success_url: `https://didiersachs.herokuapp.com/success/{CHECKOUT_SESSION_ID}`,
+      cancel_url: `https://didiersachs.herokuapp.com/cart`,
     })
     res.json({ url: session.url })
     console.log(session.url);

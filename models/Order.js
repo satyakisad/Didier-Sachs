@@ -17,7 +17,9 @@ const OrderSchema = new mongoose.Schema(
                     type:Number,
                     default:0
                 }
-            }
+            },
+
+           checkoutId:{type:String, required:true} 
        
         
        

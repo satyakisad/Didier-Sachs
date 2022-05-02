@@ -75,7 +75,8 @@ export const Neworder = async(dispatch,user,cart)=>
       {
           products: [...cart.products],
           quantity: cart.quantity,
-          price: cart.total
+          price: cart.total,
+          checkoutId: cart.checkoutId
       },
       userId:user._id},{headers:{token:`Bearer ${user.accessToken}`}})
    
