@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.87ae6d35.css",
+    "main.js": "/static/js/main.cbc2e9ea.js",
+    "static/media/3.png": "/static/media/3.d4866f03720fdd545fbd.png",
+    "static/media/pngwing.com.png": "/static/media/pngwing.com.eadde942db626a430abb.png",
+    "static/media/loginpage.jpg": "/static/media/loginpage.ac146a35f4c0a55018f0.jpg",
+    "index.html": "/index.html",
+    "main.87ae6d35.css.map": "/static/css/main.87ae6d35.css.map",
+    "main.cbc2e9ea.js.map": "/static/js/main.cbc2e9ea.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.87ae6d35.css",
+    "static/js/main.cbc2e9ea.js"
+  ]
+}
