@@ -13,7 +13,7 @@ import { initialCart } from "./redux/cartRedux";
 import ScrollToTop from "./ScrollToTop";
 
 
-export const REACT_APP_URL = "https://didiersachs.herokuapp.com";
+export const REACT_APP_URL = "https://didiersachs.herokuapp.com/api";
 
 function App() {
 
