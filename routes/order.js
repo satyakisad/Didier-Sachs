@@ -12,7 +12,7 @@ router.post("/:id", verifyTokenAndAuth, async (req, res) => {
     const checkoutId= newOrder.checkoutId;
     try {
         const checkOrder = await find({checkoutId:checkoutId});
-        if(checkOrder>=1)
+        if(checkOrder.length>=1)
         {throw {msg:"Dont fool us"};
         
          }
