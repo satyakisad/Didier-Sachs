@@ -76,9 +76,10 @@ export const Neworder = async(dispatch,user,cart)=>
           products: [...cart.products],
           quantity: cart.quantity,
           price: cart.total,
-          checkoutId: cart.checkoutId
+          
       },
-      userId:user._id},{headers:{token:`Bearer ${user.accessToken}`}})
+      userId:user._id,
+      checkoutId: cart.checkoutId},{headers:{token:`Bearer ${user.accessToken}`}})
    
 
       await axios.put(REACT_APP_URL+"/cart/"+user._id,
