@@ -58,12 +58,17 @@ useEffect( ()=>             //useeffect used, because the cart needs to load fro
   if(cart.quantity===0)
   return;
   const fetch=async ()=>{
+    try{
     console.log(cart)
   
   console.log(cart)
   const res = await axios.get(REACT_APP_URL+'/checkout/success/'+id)
   Neworder(dispatch,user,{...cart,checkoutId:id});
-  console.log(res.data);
+  console.log("authenticated");
+    }
+  catch(e){
+    console.log("dont fool me");
+  }
 
 };
 fetch();

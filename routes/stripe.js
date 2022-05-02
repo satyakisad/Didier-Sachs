@@ -61,10 +61,16 @@ try {
 });
 
 router.get('/success/:session_id', async (req, res) => {
+  try{
   const session = await stripe.checkout.sessions.retrieve(req.params.session_id);
   const customer = await stripe.customers.retrieve(session.customer);
 
   res.json({session:session,customer:customer});
+  }
+  catch(e)
+  {
+    res.status(500).json(e);
+  }
 });
 
 

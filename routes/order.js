@@ -9,13 +9,9 @@ const { verifyTokenAndAuth, verifyToken, verifyTokenAndAdmin } = require("./veri
 //CREATE
 router.post("/:id", verifyTokenAndAuth, async (req, res) => {
     const newOrder = new Order(req.body);
-    const checkoutId= newOrder.checkoutId;
+   
     try {
-        const checkOrder = await Order.find({checkoutId:checkoutId});
-        if(checkOrder.length>=1)
-        {throw {msg:"Dont fool us"};
         
-         }
         const savedOrder = await newOrder.save();
         res.status(200).json(savedOrder);
     } catch (err) {

@@ -19,7 +19,7 @@ const OrderSchema = new mongoose.Schema(
                 }
             },
 
-           checkoutId:{type:String, required:true} 
+           checkoutId:{type:String, required:true,unique:true} 
        
         
        
