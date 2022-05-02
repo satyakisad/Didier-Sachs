@@ -11,7 +11,7 @@ router.post("/:id", verifyTokenAndAuth, async (req, res) => {
     const newOrder = new Order(req.body);
     const checkoutId= newOrder.checkoutId;
     try {
-        const checkOrder = await find({checkoutId:checkoutId});
+        const checkOrder = await Order.find({checkoutId:checkoutId});
         if(checkOrder.length>=1)
         {throw {msg:"Dont fool us"};
         
