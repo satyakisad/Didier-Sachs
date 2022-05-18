@@ -70,16 +70,13 @@ export default function Product({item}) {
 
       <Image src={item.img[0]} />
       <InfoContainer>
+      <Link to={`/product/${item._id}`} style={{ color: 'inherit', textDecoration: 'inherit'}} >
         <Icon>
           <ShoppingCartOutlined />
         </Icon>
-        <Link to={`/product/${item._id}`} style={{ color: 'inherit', textDecoration: 'inherit'}} >
-        <Icon>
-          
-          <SearchOutlined />
-          
-        </Icon>
         </Link>
+        
+       
         <Icon>
           <FavoriteBorderOutlined />
         </Icon>
