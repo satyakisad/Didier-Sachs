@@ -90,8 +90,8 @@ export default function Navbar() {
                 <Left>
                     <Language>EN</Language>
                     <SearchContainer>
-                        <Input onChange={(e) => setSearch(e.target.value)}/>
-                        <Link to={`/products/${search.toLowerCase()}`} style={{ color: 'inherit', textDecoration: 'inherit'}}>
+                        <Input onChange={(e) => setSearch(e.target.value.toLowerCase())}/>
+                        <Link to={`/products/${search}`} style={{ color: 'inherit', textDecoration: 'inherit'}}>
                         <Search />
                         </Link>
 
